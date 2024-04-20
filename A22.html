@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditional Statements Example</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    margin-top: 50px;
+    color: #333;
+  }
+  .container {
+    margin-top: 20px;
+  }
+  label {
+    font-size: 18px;
+    color: #555;
+  }
+  input[type="number"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  #output {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+
+<h1>Conditional Statements</h1>
+
+<div class="container">
+  <label for="numberInput">Enter a number: </label>
+  <input type="number" id="numberInput">
+  <button onclick="checkNumber()">Check</button>
+</div>
+
+<div id="output"></div>
+
+<script>
+  // JavaScript code
+  function checkNumber() {
+    let inputNumber = parseInt(document.getElementById("numberInput").value);
+    
+    if (isNaN(inputNumber)) {
+      document.getElementById("output").innerHTML = "Please enter a valid number.";
+    } else {
+      if (inputNumber < 5) {
+        document.getElementById("output").innerHTML = "The number " + inputNumber + " is less than 5.";
+      } else if (inputNumber === 5) {
+        document.getElementById("output").innerHTML = "The number is 5.";
+      } else {
+        document.getElementById("output").innerHTML = "The number " + inputNumber + " is greater than 5.";
+      }
+    }
+  }
+</script>
+
+</body>
+</html>

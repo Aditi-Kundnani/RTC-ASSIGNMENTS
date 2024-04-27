@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number to Words</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #007bff;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    p {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Number to Words Converter</h1>
+    <label for="numberInput">Enter a number (0-9):</label>
+    <input type="text" id="numberInput">
+    <button onclick="convertNumber()">Convert</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function convertNumber() {
+      var numberInput = document.getElementById("numberInput").value;
+      var number = parseInt(numberInput);
+      var resultElement = document.getElementById("result");
+
+      switch (number) {
+        case 0:
+          resultElement.innerText = "Zero";
+          break;
+        case 1:
+          resultElement.innerText = "One";
+          break;
+        case 2:
+          resultElement.innerText = "Two";
+          break;
+        case 3:
+          resultElement.innerText = "Three";
+          break;
+        case 4:
+          resultElement.innerText = "Four";
+          break;
+        case 5:
+          resultElement.innerText = "Five";
+          break;
+        case 6:
+          resultElement.innerText = "Six";
+          break;
+        case 7:
+          resultElement.innerText = "Seven";
+          break;
+        case 8:
+          resultElement.innerText = "Eight";
+          break;
+        case 9:
+          resultElement.innerText = "Nine";
+          break;
+        default:
+          resultElement.innerText = "Invalid number";
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
